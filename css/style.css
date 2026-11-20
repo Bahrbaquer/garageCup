@@ -1,0 +1,448 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    font-family: tahoma;
+}
+html {
+    font-size: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 1.75rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.25rem;
+}
+h5 {
+    font-size: 1.125rem;
+}
+h6 {
+    font-size: 1rem;
+}
+p {
+    font-size: 1rem;
+}
+a {
+    text-decoration: none;
+}
+.maxContainer {
+    max-width: 1200px;
+    margin:0 auto;
+    position: relative;
+}
+header {
+    width:100%;
+    padding:1rem;
+    background-color: #13294b;
+    user-select: none;
+}
+.headerContainer {
+    max-width: 1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 110px 1fr 315px;
+    color:white;
+    text-align: center;
+    align-items: center;
+}
+.headerContainer > a {
+    grid-column: 1;
+    grid-row: 1;
+}
+.menuToggle {
+    display: none;
+}
+.mobileMenu {
+    display: contents;
+}
+.mobileMenu nav {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rightAlign {
+    grid-column: 3;
+    grid-row: 1;
+}
+nav a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:1rem;
+    font-family: arial;
+}
+header a {
+    color:white;
+    margin:0 .5rem;
+}
+.logo {
+    height:80px;
+    text-align: left;
+}
+.rightAlign {
+    text-align: right;
+}
+.leftAlign {
+    text-align: left;
+}
+footer {
+    background-color: #13294b;
+    padding:3rem 1rem 1rem 1rem;
+    line-height: 2;
+}
+footer a {
+    color:white;
+}
+footer div p::first-line {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color:#ffea00;
+    line-height: 1.7;
+}
+.col_3_container {
+    max-width: 1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color:white;
+    text-align: center;
+}
+.icons img {
+    width:50px;
+}
+.icons a {
+    margin:0 .6rem;
+}
+.mainBanner {
+    width:100%;
+    aspect-ratio: 3/1;
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    position: relative;
+}
+.bannerText {
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    max-width: 1200px;
+    width:100%;
+    transform:translate(-50%, -50%);
+    user-select: none;
+}
+.bannerText h2{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 3.5rem;
+    line-height: 1;
+}
+.bannerText p {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+.primary-btn {
+    background-color: #7bafd4;
+    border:2px solid white;
+    color:white;
+    padding:.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.cardAreas {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:1rem;
+    text-align: center;
+}
+.cardAreas div {
+    padding:1rem;
+    background:#7bafd4;
+    margin:1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.465);
+    color:white;
+    position: relative;
+    overflow: hidden;
+}
+.cardAreas .upcomingEvent h2, .cardAreas .upcomingEvent h3 {
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.836);
+}
+.cardAreas span {
+    font-style: italic;
+    color:#ffea00;
+}
+.cardAreas .upcomingEvent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bioImg {
+    width:50%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border:4px solid white;
+}
+#course_bkrd_img {
+    position: absolute;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    top:0;
+    left: 0;
+    z-index: 0;
+    opacity: .25;
+}
+.aboutLeague {
+    padding: 3rem 1rem;
+    background-color: #13294b;
+    border-bottom:4px solid white;
+}
+.aboutLeague h2 {
+    margin-bottom: 2rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+.aboutLeague p {
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.aboutLeague .aboutTagline {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.leagueHighlighst {
+    padding:3rem;
+    max-width: 1200px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+}
+.leagueHighlighst .video {
+    flex: 2;
+    margin:2rem;
+}
+.leagueHighlighst div {
+    flex: 1;
+    margin:2rem;
+}
+.leagueHighlighst div iframe {
+    width:100%;
+    aspect-ratio: 16/9;
+    height:auto;
+}
+.leagueHighlighst .roundHighlightInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: gray;
+}
+.roundHighlightInfo p::first-line {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color:#13294b;
+    line-height: 1.7;
+}
+.leagueHighlighst h2 {
+    flex:100%;
+    font-size: 2rem;
+    margin-left:2rem;
+    color: #13294b;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .headerContainer {
+        grid-template-columns: 80px minmax(0, 1fr) 44px;
+    }
+
+    .headerContainer > a {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo {
+        width: 80px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .menuToggle {
+        display: flex;
+        grid-column: 3;
+        grid-row: 1;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        margin-left: auto;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+        background: transparent;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menuToggle span {
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background: white;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menuToggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menuToggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuToggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .mobileMenu {
+        display: none;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .mobileMenu.isOpen {
+        display: block;
+    }
+
+    .mobileMenu nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem;
+    }
+
+    .mobileMenu nav a {
+        padding: 0.65rem 0.25rem;
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    .rightAlign {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .rightAlign input {
+        width: 140px;
+        max-width: 100%;
+    }
+
+    .mainBanner {
+        aspect-ratio: 16 / 9;
+    }
+
+    .bannerText {
+        padding: 0 1rem;
+    }
+
+    .bannerText h2 {
+        font-size: 2.25rem;
+    }
+
+    .bannerText p {
+        font-size: 1.1rem;
+    }
+
+    .cardAreas {
+        grid-template-columns: 1fr;
+    }
+
+    .leagueHighlighst {
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
+    .leagueHighlighst h2 {
+        margin-left: 1rem;
+    }
+
+    .leagueHighlighst .video,
+    .leagueHighlighst div {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .col_3_container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .leftAlign {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContainer {
+        grid-template-columns: 80px minmax(0, 1fr) 44px;
+    }
+
+    .rightAlign input {
+        max-width: 180px;
+    }
+
+    .bannerText h2 {
+        font-size: 1.8rem;
+    }
+
+    .bannerText p {
+        font-size: 1rem;
+    }
+
+    .cardAreas {
+        padding: 0.5rem;
+    }
+
+    .cardAreas div {
+        margin: 0.5rem;
+    }
+
+    .aboutLeague {
+        padding: 2rem 1.25rem;
+    }
+}

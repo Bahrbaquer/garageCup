@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf League</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+            <button class="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="rightAlign">
+                <a href="#">Account / Login</a>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="mobileMenu" id="mobileMenu">
+                <nav>
+                    <a href="#">Schedule</a>
+                    <a href="#">Leaderboard</a>
+                    <a href="#">Players</a>
+                    <a href="#">Rules</a>
+                    <a href="#">Records</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="mainBanner">
+        <div class="bannerText">
+            <h2>Cold Outside.<br>Game On.</h2>
+            <p>Friends. Winter golf. The Garage Cup.</p>
+            <br>
+            <a href="#" class="primary-btn">Leaderboard</a>
+        </div>
+    </main>
+    <section class="cardAreas">
+        <div class="upcomingEvent">
+            <h2>Next Round: <br><span id="nextCourse">Pebble Beach</span></h2>
+            <h3>Date: <span id="nextDate">12/9</span></h3>
+            <h3>Time: <span id="textTime">8:00pm</span></h3>
+            
+            <h3>Format: <span id="nextFormat">Scramble</span></h3>
+            <img src="images/courses/pebbleBeach.jfif" id="course_bkrd_img" alt="">
+        </div>
+        <div>
+            <h2>Current Leader: <br><span id="playerName">Chris Bahr</span></h2>
+            <img src="images/bioPics/chrisBahr.jpg" alt="" id="playerImg" class="bioImg">
+            <p></p>
+            <p>Points: <span id="pointsTotal">0</span></p>
+            <p>Record: <span id="playerRecord">0-0-0</span></p>
+            
+        </div>
+    </section>
+    <section class="aboutLeague">
+        <div class="maxContainer">
+            <h2>About the League</h2>
+
+            <p>
+                Welcome to The Garage Cup—where golf season doesn’t end
+                when winter arrives. We’re a group of friends bringing
+                friendly competition, big swings, and a few questionable
+                shots to a garage golf simulator.
+            </p>
+
+            <p>
+                Our home course? The Shank Shack. Our goal? Earn points,
+                climb the Garage Cup standings, and take home bragging
+                rights. It all leads to The Garage Open, our season-ending
+                championship.
+            </p>
+
+            <p class="aboutTagline">
+                Cold Outside. Game On.
+            </p>
+        </div>
+    </section>
+    <section class="leagueHighlighst">
+        <h2>The Garage Cup</h2>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/SbxzBFLwjEA?si=u9vJ6hSSdONb1Ttj" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+            web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="roundHighlightInfo">
+            <p>Round Winners: <br>
+                <span id="roundWinner">Chris takes the win shooting an 88 at "The Old Course".</span>
+            </p>
+            <p>Shot of the Night: <br>
+                <span id="shotOfTheNight">Ryan sticks it to 3' 6" on a 187 yard par 3!</span>
+            </p>
+            <p>Moment of the Night: <br>
+                <span id="momentOfTheNight">Dylan is given his 4th computer assigned 3 putt of the round...</span>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="col_3_container">
+            <div class="leftAlign">
+                <p>
+                    The Garage Cup 
+                    <br>
+                    Winter golf at "The Shank Shack"
+                    <br>
+                    6 week season
+                    <br>
+                    Scramble and Alt Shot Formats
+                </p>
+            </div>
+            <div>
+                <p>
+                    Quick Links
+                    <br>
+                    <a href="#">Schedule</a> <br>
+                    <a href="#">Cup Standings</a> <br>
+                    <a href="#">League Rules</a>
+                </p>
+            </div>
+            <div class="icons">
+                <p>Social Links</p>
+                <a href="#"><img src="images/icons/iYoutube.png" alt=""></a>
+                <a href="#"><img src="images/icons/iInstagram.png" alt=""></a>
+                <a href="#"><img src="images/icons/iX.png" alt=""></a>
+                <br>
+                <a href="#"><img src="images/icons/iTikTok.png" alt=""></a>
+                <a href="#"><img src="images/icons/iFacebook.png" alt=""></a>  
+            </div>
+        </div>
+        <p style="text-align: center; color:gray">&copy; 2026 Garage Cup. All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
