@@ -1,7 +1,7 @@
 * {
     margin:0;
     box-sizing: border-box;
-    font-family: tahoma;
+    font-family: arial;
 }
 html {
     font-size: 100%;
@@ -52,7 +52,7 @@ header {
     max-width: 1200px;
     margin:0 auto;
     display:grid;
-    grid-template-columns: 110px 1fr 315px;
+    grid-template-columns: 110px 1fr 110px;
     color:white;
     text-align: center;
     align-items: center;
@@ -170,6 +170,11 @@ footer div p::first-line {
     padding: .5rem 1rem;
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+.widthChange {
+    width:45%;
 }
 .heroActions {
     display: flex;
@@ -203,6 +208,14 @@ footer div p::first-line {
 }
 .seasonOverview strong {
     color: #13294b;
+}
+.seasonOverview a {
+    border:1px solid #13294b;
+    padding:.35rem;
+    color: #13294b;
+    font-weight: bold;
+    display: inline-block;
+    margin:.35rem 0;
 }
 .cardAreas {
     display:grid;
@@ -277,6 +290,7 @@ footer div p::first-line {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 .bioImg {
     width:50%;
@@ -380,9 +394,51 @@ footer div p::first-line {
     margin-left:2rem;
     color: #13294b;
 }
+/** Table CSS **/
+.fillPage {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 
+}
+.tableSchedule {
+    max-width: 1200px;
+    width: 100%;
+    margin:1rem auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border:3px solid gray;
+    border-radius: 1rem;
+    text-align: center;
+}
+.tableSchedule tr {
+    background-color: #e4e4e4;
 
+}
+.tableSchedule tr:nth-child(odd) {
+    background-color: #c9c9c9;
+}
+.tableSchedule tr:nth-child(1) {
+    background-color: #13294b;
+    color: #ffffff;
+}
+.tableSchedule th {
+    padding:1rem;
+    border:1px solid gray;
+}
+.tableSchedule td {
+    border:1px solid gray;
+    padding:1rem;
+    color:#13294b;
+    font-weight: bold;
+}
+.scheduleTextArea {
+    max-width: 1200px;
+    padding:1rem;
+    margin: 1rem auto;
 
+}
 
 
 
@@ -580,5 +636,8 @@ footer div p::first-line {
 
     .aboutLeague {
         padding: 2rem 1.25rem;
+    }
+    .tableSchedule {
+        font-size: 67%;
     }
 }
