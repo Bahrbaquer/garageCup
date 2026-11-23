@@ -154,12 +154,55 @@ footer div p::first-line {
     font-size: 1.5rem;
 }
 .primary-btn {
-    background-color: #7bafd4;
+    background-color: #ffea00;
     border:2px solid white;
-    color:white;
+    color:#13294b;
     padding:.5rem 1rem;
     text-transform: uppercase;
     font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+.secondary-btn {
+    background-color: rgba(19, 41, 75, 0.9);
+    border: 2px solid white;
+    color: white;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.heroActions {
+    display: flex;
+    gap: .75rem;
+    margin-top: 1.25rem;
+}
+.seasonOverview {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.seasonOverview div {
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-top: 4px solid #13294b;
+    border-bottom: 1px solid #dce3ec;
+    background: #f7f9fc;
+}
+.seasonOverview span {
+    color: #5d6b7d;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+    font-size: .75rem;
+    margin-bottom: .35rem;
+}
+.seasonOverview strong {
+    color: #13294b;
 }
 .cardAreas {
     display:grid;
@@ -182,7 +225,49 @@ footer div p::first-line {
 .cardAreas h2, .cardAreas h3, .cardAreas p {
     z-index: 1;
     position: relative;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.836);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+}
+.cardAreas .cardLabel {
+    text-transform: uppercase;
+    letter-spacing: .12rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+.cardAreas .detailLabel {
+    display: block;
+    color: white;
+    font-family: arial;
+    font-size: .72rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .08rem;
+}
+.cardDetails {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.cardDetails h3 {
+    font-size: 1.1rem;
+}
+.leaderStats {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    background: rgba(19, 41, 75, .72) !important;
+    box-shadow: none !important;
+    border-radius: .5rem;
+    margin: .25rem auto 0 !important;
+    padding: .65rem !important;
+}
+.leaderStats p {
+    margin: 0;
 }
 .cardAreas span {
     font-style: italic;
@@ -246,39 +331,50 @@ footer div p::first-line {
     font-weight: bold;
     font-size: 1.3rem;
 }
-.leagueHighlighst {
+.leagueHighlights {
     padding:3rem;
     max-width: 1200px;
     margin:0 auto;
     display:flex;
     flex-wrap: wrap;
 }
-.leagueHighlighst .video {
+.leagueHighlights .video {
     flex: 2;
     margin:2rem;
 }
-.leagueHighlighst div {
+.leagueHighlights div {
     flex: 1;
     margin:2rem;
 }
-.leagueHighlighst div iframe {
+.leagueHighlights div iframe {
     width:100%;
     aspect-ratio: 16/9;
     height:auto;
 }
-.leagueHighlighst .roundHighlightInfo {
+.leagueHighlights .roundHighlightInfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: gray;
+    color: #5d6b7d;
 }
-.roundHighlightInfo p::first-line {
+.roundHighlightInfo article {
+    padding: .85rem 1rem;
+    border-left: 4px solid #ffea00;
+    background: #f7f9fc;
+}
+.roundHighlightInfo .highlightLabel {
+    display: block;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: .9rem;
     color:#13294b;
-    line-height: 1.7;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
 }
-.leagueHighlighst h2 {
+.roundHighlightInfo p {
+    margin-top: .35rem;
+    line-height: 1.45;
+}
+.leagueHighlights h2 {
     flex:100%;
     font-size: 2rem;
     margin-left:2rem;
@@ -368,20 +464,7 @@ footer div p::first-line {
     }
 
     .rightAlign {
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.35rem;
-        margin: 0;
-        text-align: center;
-    }
-
-    .rightAlign input {
-        width: 140px;
-        max-width: 100%;
+        display: none;
     }
 
     .mainBanner {
@@ -410,26 +493,52 @@ footer div p::first-line {
     .bannerText p {
         font-size: 1.1rem;
     }
-    .bannerText .btmBtn {
-        position:absolute;
-        bottom:3rem;
-        transform: translate(-50%, 0);
+    .heroActions {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        width: calc(100% - 2rem);
+        max-width: 480px;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+    .heroActions a {
+        flex: 1;
+        text-align: center;
     }
     .cardAreas {
         grid-template-columns: 1fr;
     }
 
-    .leagueHighlighst {
+    .seasonOverview {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+        padding-top: 1rem;
+    }
+
+    .seasonOverview div {
+        min-height: 68px;
+    }
+
+    .cardDetails {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .leaderStats {
+        width: min(80%, 280px);
+    }
+
+    .leagueHighlights {
         padding: 2rem 1rem;
         flex-direction: column;
     }
 
-    .leagueHighlighst h2 {
+    .leagueHighlights h2 {
         margin-left: 1rem;
     }
 
-    .leagueHighlighst .video,
-    .leagueHighlighst div {
+    .leagueHighlights .video,
+    .leagueHighlights div {
         width: 100%;
         margin: 1rem 0;
     }

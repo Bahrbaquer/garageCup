@@ -28,6 +28,7 @@
                     <a href="#">Players</a>
                     <a href="#">Rules</a>
                     <a href="#">Records</a>
+                    <a href="#">Account / Login</a>
                 </nav>
             </div>
         </div>
@@ -36,26 +37,46 @@
         <div class="bannerText">
             <h2>Cold Outside.<br>Game On.</h2>
             <p>Friends. Winter golf. The Garage Cup.</p>
-            <br>
-            <a href="#" class="primary-btn btmBtn">Leaderboard</a>
+            <div class="heroActions">
+                <a href="#" class="primary-btn">Leaderboard</a>
+                <a href="#" class="secondary-btn">View Schedule</a>
+            </div>
         </div>
     </main>
-    <section class="cardAreas">
-        <div class="upcomingEvent">
-            <h2>Next Round: <br><span id="nextCourse">Pebble Beach</span></h2>
-            <h3>Date: <span id="nextDate">12/9</span></h3>
-            <h3>Time: <span id="textTime">8:00pm</span></h3>
-            
-            <h3>Format: <span id="nextFormat">Scramble</span></h3>
-            <img src="images/courses/pebbleBeach.jfif" id="course_bkrd_img" alt="">
+    <section class="seasonOverview" aria-label="Season overview">
+        <div>
+            <span>Season</span>
+            <strong>6 Weeks</strong>
         </div>
         <div>
-            <h2>Current Leader: <br><span id="playerName">Chris Bahr</span></h2>
-            <img src="images/bioPics/chrisBahr.jpg" alt="" id="playerImg" class="bioImg">
-            <p></p>
-            <p>Points: <span id="pointsTotal">0</span></p>
-            <p>Record: <span id="playerRecord">0-0-0</span></p>
-            <img src="images/logo.png" alt="" id="playerImg_bkrd" >
+            <span>Formats</span>
+            <strong>Scramble + Alt Shot</strong>
+        </div>
+        <div>
+            <span>Championship</span>
+            <strong>The Garage Open</strong>
+        </div>
+    </section>
+    <section class="cardAreas">
+        <div class="upcomingEvent">
+            <p class="cardLabel">Next Round</p>
+            <h2><span id="nextCourse">Pebble Beach</span></h2>
+            <div class="cardDetails">
+                <h3><span class="detailLabel">Date</span><span id="nextDate">12/9</span></h3>
+                <h3><span class="detailLabel">Time</span><span id="textTime">8:00pm</span></h3>
+                <h3><span class="detailLabel">Format</span><span id="nextFormat">Scramble</span></h3>
+            </div>
+            <img src="images/courses/pebbleBeach.jfif" id="course_bkrd_img" alt="Pebble Beach golf course">
+        </div>
+        <div class="leaderCard">
+            <p class="cardLabel">Current Leader</p>
+            <h2><span id="playerName">Chris Bahr</span></h2>
+            <img src="images/bioPics/chrisBahr.jpg" alt="Chris Bahr" id="playerImg" class="bioImg">
+            <div class="leaderStats">
+                <p><span class="detailLabel">Points</span><span id="pointsTotal">0</span></p>
+                <p><span class="detailLabel">Record</span><span id="playerRecord">0-0-0</span></p>
+            </div>
+            <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
         </div>
     </section>
     <section class="aboutLeague">
@@ -81,25 +102,28 @@
             </p>
         </div>
     </section>
-    <section class="leagueHighlighst">
+    <section class="leagueHighlights">
         <h2>The Garage Cup</h2>
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/SbxzBFLwjEA?si=u9vJ6hSSdONb1Ttj" 
+            <iframe src="https://www.youtube-nocookie.com/embed/SbxzBFLwjEA?si=u9vJ6hSSdONb1Ttj" 
             title="YouTube video player" frameborder="0" allow="accelerometer; 
             autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
             web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
         </div>
         <div class="roundHighlightInfo">
-            <p>Round Winners: <br>
-                <span id="roundWinner">Chris takes the win shooting an 88 at "The Old Course".</span>
-            </p>
-            <p>Shot of the Night: <br>
-                <span id="shotOfTheNight">Ryan sticks it to 3' 6" on a 187 yard par 3!</span>
-            </p>
-            <p>Moment of the Night: <br>
-                <span id="momentOfTheNight">Dylan is given his 4th computer assigned 3 putt of the round...</span>
-            </p>
+            <article>
+                <span class="highlightLabel">Round Winner</span>
+                <p id="roundWinner">Chris takes the win shooting an 88 at "The Old Course".</p>
+            </article>
+            <article>
+                <span class="highlightLabel">Shot of the Night</span>
+                <p id="shotOfTheNight">Ryan sticks it to 3' 6" on a 187 yard par 3!</p>
+            </article>
+            <article>
+                <span class="highlightLabel">Moment of the Night</span>
+                <p id="momentOfTheNight">Dylan is given his 4th computer assigned 3 putt of the round...</p>
+            </article>
         </div>
     </section>
     <footer>
