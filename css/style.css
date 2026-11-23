@@ -225,7 +225,8 @@ footer div p::first-line {
     padding:1rem;
     text-align: center;
 }
-.cardAreas div {
+.cardAreas > div,
+.cardAreas > .playerCard {
     padding:1rem;
     background:#7bafd4;
     margin:1rem;
@@ -282,6 +283,20 @@ footer div p::first-line {
 .leaderStats p {
     margin: 0;
 }
+.playerCards .leaderStats {
+    width: min(100%, 420px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.dataStatus {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    padding: 0 1rem;
+    color: #5d6b7d;
+    text-align: center;
+}
+.dataStatus.isError {
+    color: #a61b1b;
+}
 .cardAreas span {
     font-style: italic;
     color:#ffea00;
@@ -312,7 +327,8 @@ footer div p::first-line {
     z-index: 0;
     opacity: .25;
 }
-#playerImg_bkrd {
+#playerImg_bkrd,
+.playerCardBackground {
     position: absolute;
     width:100%;
     height:100%;
@@ -422,6 +438,26 @@ footer div p::first-line {
 .tableSchedule tr:nth-child(1) {
     background-color: #13294b;
     color: #ffffff;
+}
+#scheduleTable thead tr {
+    background-color: #13294b;
+    color: #ffffff;
+}
+#scheduleTable tbody tr:nth-child(1) {
+    background-color: #c9c9c9;
+    color: #13294b;
+}
+#leaderboardTable thead tr {
+    background-color: #13294b;
+    color: #ffffff;
+}
+#leaderboardTable tbody tr:nth-child(1) {
+    background-color: #c9c9c9;
+    color: #13294b;
+}
+#leaderboardTable tbody tr.leaderRow {
+    background-color: gold;
+    color: #13294b;
 }
 .tableSchedule th {
     padding:1rem;
@@ -630,7 +666,8 @@ footer div p::first-line {
         padding: 0.5rem;
     }
 
-    .cardAreas div {
+    .cardAreas > div,
+    .cardAreas > .playerCard {
         margin: 0.5rem;
     }
 

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf League</title>
+    <title>Players | The Garage Cup</title>
     <script src="js/script.js" defer></script>
+    <script src="js/csv.js" defer></script>
+    <script src="js/players.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -33,43 +35,11 @@
         </div>
     </header>
 
-    <section class="cardAreas">
-        <div class="playerCard">
-            <h2><span id="playerName">Chris Bahr</span></h2>
-            <img src="images/bioPics/chrisBahr.jpg" alt="Chris Bahr" id="playerImg" class="bioImg">
-            <div class="leaderStats">
-                <p><span class="detailLabel">Garage Cup</span><span id="pointsTotal">0<span> points</span></span></p>
-                <p><span class="detailLabel">Handicap</span><span id="playerRecord">18</span></p>
-            </div>
-            <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
-        </div>
-        <div class="playerCard">
-            <h2><span id="playerName">Spencer Hair</span></h2>
-            <img src="images/logo.png" alt="Chris Bahr" id="playerImg" class="bioImg">
-            <div class="leaderStats">
-                <p><span class="detailLabel">Garage Cup</span><span id="pointsTotal">0<span> points</span></span></p>
-                <p><span class="detailLabel">Handicap</span><span id="playerRecord">18</span></p>
-            </div>
-            <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
-        </div>
-        <div class="playerCard">
-            <h2><span id="playerName">Dylan Rhodes</span></h2>
-            <img src="images/logo.png" alt="Chris Bahr" id="playerImg" class="bioImg">
-            <div class="leaderStats">
-                <p><span class="detailLabel">Garage Cup</span><span id="pointsTotal">0<span> points</span></span></p>
-                <p><span class="detailLabel">Handicap</span><span id="playerRecord">18</span></p>
-            </div>
-            <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
-        </div>
-        <div class="playerCard">
-            <h2><span id="playerName">Ryan Wong</span></h2>
-            <img src="images/logo.png" alt="Chris Bahr" id="playerImg" class="bioImg">
-            <div class="leaderStats">
-                <p><span class="detailLabel">Garage Cup</span><span id="pointsTotal">0<span> points</span></span></p>
-                <p><span class="detailLabel">Handicap</span><span id="playerRecord">18</span></p>
-            </div>
-            <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
-        </div>
+    <p class="dataStatus" id="playersStatus" role="status" aria-live="polite">Loading player profiles…</p>
+    <section class="cardAreas playerCards" id="playerCards"
+        aria-label="League players"
+        data-sheet-url="https://docs.google.com/spreadsheets/d/e/2PACX-1vRPFqofsibngSPR-qcSst9N36PxWSo9YDAIhBzpJ27pZkhKh7nEtgwL7ehBFai2Nk2HQyoh3k6GHGok/pub?gid=0&amp;single=true&amp;output=csv"
+        data-fallbacks='{"Chris Bahr":{"Points":"0","Handicap":"18"},"Spencer Hair":{"Points":"0","Handicap":"7"},"Dylan Rhodes":{"Points":"0","Handicap":"10"},"Ryan Wong":{"Points":"0","Handicap":"4"}}'>
     </section>
    
 

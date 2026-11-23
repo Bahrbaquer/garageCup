@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf League</title>
+    <title>Leaderboard | The Garage Cup</title>
     <script src="js/script.js" defer></script>
+    <script src="js/csv.js" defer></script>
+    <script src="js/leaderboard.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="fillPage">
@@ -30,32 +32,16 @@
         </div>
     </header>
     <div>
-        <table class="tableSchedule">
-            <tr>
-                <th>Points:</th>
-                <th>Player:</th>
-                <th>Record:</th>
-            </tr>
-            <tr style="background-color:gold">
-                <td>0</td>
-                <td>Chris Bahr</td>
-                <td>0-0-0</td>
-            </tr>
-            <tr>
-                <td>0</td>
-                <td>Dylan Rhodes</td>
-                <td>0-0-0</td>
-            </tr>
-            <tr>
-                <td>0</td>
-                <td>Spencer Hair</td>
-                <td>0-0-0</td>
-            </tr>
-            <tr>
-                <td>0</td>
-                <td>Ryan Wong</td>
-                <td>0-0-0</td>
-            </tr>
+        <p class="dataStatus" id="leaderboardStatus" role="status" aria-live="polite">Loading leaderboard…</p>
+        <table class="tableSchedule" id="leaderboardTable">
+            <thead>
+                <tr>
+                    <th>Points:</th>
+                    <th>Player:</th>
+                    <th>Record:</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardRows"></tbody>
         </table>
         <div class="scheduleTextArea">
             <p>Players are awarded 100 points for a tie, 200 points for a win.</p>

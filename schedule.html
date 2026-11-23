@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf League</title>
+    <title>Schedule | The Garage Cup</title>
     <script src="js/script.js" defer></script>
+    <script src="js/csv.js" defer></script>
+    <script src="js/schedule.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="fillPage">
@@ -30,56 +32,18 @@
         </div>
     </header>
     <div>
-        <table class="tableSchedule">
-            <tr>
-                <th>Date:</th>
-                <th>Course:</th>
-                <th>Format:</th>
-                <th>Team:</th>
-                <th>Team:</th>
-            </tr>
-            <tr>
-                <td>1/6</td>
-                <td>Pebble Beach</td>
-                <td>Scramble</td>
-                <td>Dylan / Chris</td>
-                <td>Ryan / Spencer</td>
-            </tr>
-            <tr>
-                <td>1/13</td>
-                <td>Pebble Beach</td>
-                <td>Scramble</td>
-                <td>Spencer / Dylan</td>
-                <td>Chris / Ryan</td>
-            </tr>
-            <tr>
-                <td>1/20</td>
-                <td>Pebble Beach</td>
-                <td>Scramble</td>
-                <td>Chris / Spencer</td>
-                <td>Ryan / Dylan</td>
-            </tr>
-            <tr>
-                <td>1/27</td>
-                <td>Pebble Beach</td>
-                <td>Alt Shot</td>
-                <td>Dylan / Chris</td>
-                <td>Ryan / Spencer</td>
-            </tr>
-            <tr>
-                <td>2/3</td>
-                <td>Pebble Beach</td>
-                <td>Alt Shot</td>
-                <td>Spencer / Dylan</td>
-                <td>Chris / Ryan</td>
-            </tr>
-            <tr>
-                <td>2/10</td>
-                <td>Pebble Beach</td>
-                <td>Alt Shot</td>
-                <td>Chris / Spencer</td>
-                <td>Ryan / Dylan</td>
-            </tr>
+        <p class="dataStatus" id="scheduleStatus" role="status" aria-live="polite">Loading schedule…</p>
+        <table class="tableSchedule" id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Date:</th>
+                    <th>Course:</th>
+                    <th>Format:</th>
+                    <th>Team A:</th>
+                    <th>Team B:</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleRows"></tbody>
         </table>
         <div class="scheduleTextArea">
             <p>*All tee times are at 8:15pm</p>
