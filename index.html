@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf League</title>
+    <title>The Garage Cup</title>
     <script src="js/script.js" defer></script>
+    <script src="js/csv.js" defer></script>
+    <script src="js/homepage.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -60,27 +62,34 @@
         </div>
     </section>
     <section class="cardAreas">
-        <div class="upcomingEvent">
+        <div class="upcomingEvent" id="nextRoundCard">
             <p class="cardLabel">Next Round</p>
-            <h2><span id="nextCourse">Pebble Beach</span></h2>
+            <h2><span id="nextCourse">Loading…</span></h2>
             <div class="cardDetails">
-                <h3><span class="detailLabel">Date</span><span id="nextDate">1/6</span></h3>
-                <h3><span class="detailLabel">Time</span><span id="textTime">8:00pm</span></h3>
-                <h3><span class="detailLabel">Format</span><span id="nextFormat">Scramble</span></h3>
+                <h3><span class="detailLabel">Date</span><span id="nextDate">—</span></h3>
+                <h3><span class="detailLabel">Time</span><span id="textTime">8:15pm</span></h3>
+                <h3><span class="detailLabel">Format</span><span id="nextFormat">—</span></h3>
             </div>
-            <img src="images/courses/pebbleBeach.jfif" id="course_bkrd_img" alt="Pebble Beach golf course">
+            <div class="nextTeams" id="nextTeams" hidden>
+                <div class="teamPlayers" id="nextTeamA"></div>
+                <span class="teamVs">vs</span>
+                <div class="teamPlayers" id="nextTeamB"></div>
+            </div>
+            <img id="course_bkrd_img" alt="" aria-hidden="true" hidden>
         </div>
         <div class="leaderCard">
             <p class="cardLabel">Current Leader</p>
-            <h2><span id="playerName">Chris Bahr</span></h2>
-            <img src="images/bioPics/chrisBahr.jpg" alt="Chris Bahr" id="playerImg" class="bioImg">
+            <h2><span id="playerName">Loading…</span></h2>
+            <img src="images/logo.png" alt="" id="playerImg" class="bioImg">
             <div class="leaderStats">
-                <p><span class="detailLabel">Points</span><span id="pointsTotal">0</span></p>
-                <p><span class="detailLabel">Record</span><span id="playerRecord">0-0-0</span></p>
+                <p><span class="detailLabel">Points</span><span id="pointsTotal">—</span></p>
+                <p><span class="detailLabel">Record</span><span id="playerRecord">—</span></p>
             </div>
             <img src="images/logo.png" alt="" id="playerImg_bkrd" aria-hidden="true">
         </div>
     </section>
+    <p class="dataStatus" id="leaderStatus" role="status" aria-live="polite" hidden></p>
+    <p class="dataStatus" id="nextRoundStatus" role="status" aria-live="polite" hidden></p>
     <section class="aboutLeague">
         <div class="maxContainer">
             <h2>About the League</h2>

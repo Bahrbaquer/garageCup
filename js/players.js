@@ -19,23 +19,6 @@ function makeStat(label, value) {
     return stat;
 }
 
-function getPlayerImageSource(image) {
-    const source = image.trim();
-    if (!source) {
-        return "images/logo.png";
-    }
-
-    if (/^(https?:)?\/\//i.test(source)
-        || source.startsWith("/")
-        || source.startsWith("./")
-        || source.startsWith("../")
-        || source.startsWith("images/")) {
-        return source;
-    }
-
-    return `images/bioPics/${source}`;
-}
-
 function makePlayerCard(player, fallback) {
     const card = document.createElement("article");
     const heading = document.createElement("h2");
@@ -53,7 +36,7 @@ function makePlayerCard(player, fallback) {
 
     photo.className = "bioImg";
     photo.alt = player.name;
-    photo.src = getPlayerImageSource(player.image);
+    photo.src = window.getGolferImageSource(player.image);
     photo.addEventListener("error", () => {
         photo.src = "images/logo.png";
     }, { once: true });

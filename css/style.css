@@ -269,6 +269,39 @@ footer div p::first-line {
 .cardDetails h3 {
     font-size: 1.1rem;
 }
+.nextTeams {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: .5rem;
+}
+.nextTeams[hidden] {
+    display: none;
+}
+.nextTeams .teamPlayers {
+    padding: .5rem;
+    border-radius: .5rem;
+    background: rgba(19, 41, 75, .72);
+}
+.nextTeams .teamPlayers span {
+    display: block;
+    color: white;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+}
+.nextTeams .teamVs {
+    color: #ffea00;
+    font-size: .9rem;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+}
 .leaderStats {
     width: 60%;
     display: grid;
@@ -326,6 +359,9 @@ footer div p::first-line {
     left: 0;
     z-index: 0;
     opacity: .25;
+}
+#course_bkrd_img[hidden] {
+    display: none;
 }
 #playerImg_bkrd,
 .playerCardBackground {
