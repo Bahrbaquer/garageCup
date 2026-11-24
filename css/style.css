@@ -511,8 +511,154 @@ footer div p::first-line {
     margin: 1rem auto;
 
 }
-
-
+.copyright {
+    text-align: center;
+    color: gray;
+}
+.contentPage {
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+.pageHeading {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    background: #13294b;
+    border-bottom: 5px solid #ffea00;
+}
+.pageHeading h1 {
+    margin: .35rem 0 .75rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+.pageHeading p:last-child {
+    max-width: 720px;
+    line-height: 1.65;
+}
+.pageHeading .eyebrow {
+    color: #ffea00;
+    font-weight: bold;
+    font-size: .8rem;
+    letter-spacing: .12rem;
+    text-transform: uppercase;
+}
+.contentSection {
+    margin: 2rem 0;
+}
+.contentSection > h2 {
+    margin-bottom: 1rem;
+    color: #13294b;
+}
+.infoGrid,
+.contactGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+.infoCard {
+    padding: 1.25rem;
+    border-top: 4px solid #13294b;
+    background: #f2f5f9;
+    color: #27374c;
+}
+.infoCard h3,
+.infoCard h2 {
+    margin-bottom: .65rem;
+    color: #13294b;
+}
+.infoCard p,
+.infoCard li {
+    line-height: 1.6;
+}
+.infoCard ol,
+.ruleList {
+    padding-left: 1.35rem;
+}
+.infoCard li + li,
+.ruleList li + li {
+    margin-top: .5rem;
+}
+.infoCard a {
+    color: #13294b;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #b5a500;
+    text-underline-offset: .15rem;
+}
+.ruleList {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    border-left: 4px solid #ffea00;
+    background: #f2f5f9;
+    color: #27374c;
+    line-height: 1.6;
+}
+.rulesNote,
+.recordsNote,
+.contactNote {
+    padding: 1rem 1.25rem;
+    border-left: 4px solid #ffea00;
+    background: #f7f9fc;
+    color: #5d6b7d;
+    line-height: 1.6;
+}
+.recordsTableWrap {
+    overflow-x: auto;
+    border: 1px solid #d5dce5;
+    border-radius: .5rem;
+}
+.recordsTable {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    text-align: left;
+}
+.recordsTable th,
+.recordsTable td {
+    padding: .9rem 1rem;
+    border-bottom: 1px solid #d5dce5;
+}
+.recordsTable thead {
+    color: white;
+    background: #13294b;
+}
+.recordsTable tbody tr:nth-child(even) {
+    background: #f2f5f9;
+}
+.recordsTable tbody th {
+    color: #13294b;
+}
+.recordsTable tbody tr:last-child th,
+.recordsTable tbody tr:last-child td {
+    border-bottom: 0;
+}
+.recordsNote {
+    margin-top: 1rem;
+}
+.contactGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.contactCard h2 {
+    font-size: 1.35rem;
+}
+.contactNumber {
+    display: inline-block;
+    margin-bottom: .9rem;
+    color: #7bafd4;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+.contactTip {
+    margin-top: 1rem;
+    padding-top: .75rem;
+    border-top: 1px solid #d5dce5;
+    color: #5d6b7d;
+    font-size: .9rem;
+}
+.contactNote {
+    margin-top: 2rem;
+}
 
 @media (max-width: 900px) {
     .headerContainer {
@@ -679,6 +825,9 @@ footer div p::first-line {
     .leftAlign {
         text-align: center;
     }
+    .contactGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -709,6 +858,12 @@ footer div p::first-line {
 
     .aboutLeague {
         padding: 2rem 1.25rem;
+    }
+    .pageHeading {
+        padding: 1.25rem;
+    }
+    .infoGrid {
+        grid-template-columns: 1fr;
     }
     .tableSchedule {
         font-size: 67%;
